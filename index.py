@@ -27,23 +27,23 @@ def help_message(message):
 
 
 @bot.message_handler(content_types=['sticker'])
-def custom_message(message):
+def custom_message_sticker(message):
     print("============= Custom ==============")
     bot.reply_to(message, "Send Only Digit Number")
 
 @bot.message_handler(content_types=['photo'])
-def custom_message(message):
+def custom_message_photo(message):
     print("============= Custom ==============")
     bot.reply_to(message, "Send Only Digit Number")
 
 
 @bot.message_handler(commands=['hello','Hello'])
-def send_welcome(message):
+def send_welcome_hello(message):
     print("============= hello_welcome ==============")
     bot.reply_to(message, f"Hello {message.from_user.full_name}. More Option /hello  /bye.")
     
 @bot.message_handler(commands=['bye','Bye'])
-def send_welcome(message):
+def send_welcome_bye(message):
     print("============= bye_welcome ==============")
     bot.reply_to(message, f"Bye, {message.from_user.full_name}. More Option /hello  /bye.")
 
